@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'accueil</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  />
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Maher</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="inscription.php" id="inscription">Inscription</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="connexion.php" id="connexion">Connexion</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="contenu">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Cacher le contenu au chargement de la page
+        $('#contenu').hide();
+
+        // Gérer le clic sur le lien "Inscription"
+        $('#inscription').click(function () {
+            $('#contenu').load('inscription.php'); // Charger le formulaire d'inscription dans le contenu
+            $('#contenu').show();
+        });
+
+        // Gérer le clic sur le lien "Connexion"
+        $('#connexion').click(function () {
+            $('#contenu').load('connexion.php'); // Charger la page de connexion dans le contenu
+            $('#contenu').show();
+        });
+    });
+</script>
+
+<div class="container shadow p-3 mb-5 bg-white rounded mt-5">
+    <h2 class="text-center">À propos de l'application</h2>
+    <hr>
+    <p>Notre application est conçue pour simplifier la gestion des congés au sein de notre entreprise. Elle offre deux espaces distincts, adaptés aux besoins spécifiques de notre personnel et de nos administrateurs.</p>
+
+    <h4>Pour le Personnel :</h4>
+    <p>Dans cet espace dédié, les employés peuvent consulter facilement l'historique de leurs demandes de congé. Ils ont la possibilité de soumettre de nouvelles demandes de congé et de suivre l'évolution de leurs demandes précédentes, du moment de la soumission jusqu'à leur approbation ou leur refus.</p>
+
+    <h4>Pour l'Administrateur :</h4>
+    <p>L'interface réservée aux administrateurs permet une gestion efficace des demandes de congés. Ils peuvent visualiser la liste complète des employés de l'entreprise, ainsi que les demandes de congés associées. L'administrateur a le pouvoir d'approuver ou de refuser les demandes de congé en fonction des politiques de l'entreprise et des disponibilités des employés.</p>
+
+    <p>Notre application vise à simplifier et à rationaliser le processus de gestion des congés, offrant une expérience utilisateur fluide et efficace pour tous les membres de notre entreprise.</p>
+
+    <div class="alert alert-info mt-4" role="alert">
+        <i class="fas fa-info-circle"></i> Voici dans la barre au-dessus, cliquez sur "S'inscrire" si vous n'avez pas de compte, ou cliquez directement sur "Connexion" si vous avez déjà un compte.
+    </div>
+
+    <div class="alert alert-warning mt-4" role="alert">
+        <i class="fas fa-exclamation-triangle"></i> Veuillez noter que chacun devra s'authentifier pour accéder à son espace.
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
